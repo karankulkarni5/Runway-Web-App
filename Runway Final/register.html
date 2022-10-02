@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Runway by ViralFission</title>
+		<meta name="description" content="Welcome to Runway 2022">
+		<meta name="" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> 
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/styles.css" rel="stylesheet"> 
+		<link href="css/animate.css" rel="stylesheet"> 
+		<link href="css/animations.css" rel="stylesheet"> 
+		<link href="css/custom.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+		<script defer src="/__/firebase/9.7.0/firebase-app-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-auth-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-firestore-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-functions-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-messaging-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-storage-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-analytics-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-remote-config-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-performance-compat.js"></script>
+		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	</head>
+
+    <body>
+        <div class='light x1'></div>
+        <div class='light x2'></div>
+        <div class='light x3'></div>
+        <div class='light x4'></div>
+        <div class='light x5'></div>
+        <div class='light x6'></div>
+        <div class='light x7'></div>
+        <div class='light x8'></div>
+        <div class='light x9'></div>
+
+		<section id = "whenSignedOut">
+			<h1>Welcome to the Runway 2022 Registration Portal!</h1>
+			<button id = "signInBtn">Sign in with Google</button>
+		</section>
+	
+		<section id = "whenSignedIn" class = "whenSignedIn" hidden = "true">
+			<div class = "container">
+					<button id = "signOutBtn">Sign Out</button>
+					<form method="post" id="sheetdb-form" action="https://sheetdb.io/api/v1/6dfyan1973aia">
+
+						<div>
+							<span>Full Name</span>
+							<input type="text" name="data[Full Name]" placeholder="Full Name">
+						</div>
+
+						<br>
+
+						<div>
+							<span>Date of Birth</span>
+							<input type="date" name="data[DOB]"  placeholder="dd-mm-yyyy">
+	                    </div>
+
+						<br>
+
+		                <div>
+							<span>City</span>
+							<input type="text" name="data[City]" placeholder="City">
+						</div>
+
+						<br>
+
+						<div class="form-element">
+							<span>State</span>
+							<input type="text" name="data[State]" placeholder="State">
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>College Name</span>
+							<input type="text" name="data[College Name]" placeholder="College Name">
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>Contact Number</span>
+							<input type="text" name="data[Contact Number]" title="Please enter valid phone number" pattern="[6789][0-9]{9}" placeholder="Contact Number">
+						</div>
+		
+						<br>
+		
+						<div class="form-element radio-buttons">
+							<span>Are you a part of the VF Network?</span>
+							<br>
+							<label for="">
+								<input type="radio" name="data[VF Network]" value="Yes">
+								<label for="Yes">Yes</label><br>
+								<input type="radio" name="data[VF Network]" value="No">
+								<label for="No">No</label><br>
+							</label>
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>If yes, enter your VFID </span>
+							<input type="text" name="data[VFID]" placeholder="VFID">
+						</div>
+		
+						<br>
+		
+						<div class="form-element radio-buttons">
+							<span>If no, how did you hear about us?</span>
+							<br>
+							<label for="">
+								<input type="radio" id="Our Website" name="data[How did you hear about us?]" value="Our Website">
+								<label for="Our Website">Our Website</label><br>
+								<input type="radio" id="College Campus" name="data[How did you hear about us?]" value="College Campus">
+								<label for="College Campus">College Campus</label><br>
+								<input type="radio" id="Through a Friend" name="data[How did you hear about us?]" value="Through a Friend">
+								<label for="Through a Friend">Through a Friend</label><br>
+								<input type="radio" id="Collide" name="data[How did you hear about us?]" value="Collide">
+								<label for="Collide">Collide</label><br>
+								<input type="radio" id="Other" name="data[How did you hear about us?]" value="Other">
+								<label for="Other">Other</label><br>
+							</label>
+						</div>
+		
+						<br>
+		
+						<div class="form-element radio-buttons">
+							<span>Would you be comfortable coming down to Mumbai if selected for the finals? </span>
+							<br>
+							<label for="">
+								<input type="radio" id = "Yes" name="data[Mumbai]" value="Yes">
+								<label for="Yes">Yes</label><br>
+								<input type="radio" id = "No" name="data[Mumbai]" value="No">
+								<label for="No">No</label><br>
+							</label>
+						</div>
+		
+						<br>
+		
+						<div class="form-element radio-buttons">
+							<span>What is your team size?</span>
+							<br>
+							<label for="">
+								<input type="radio" id="1" name="data[Team Size]" value="1">
+								<label for="1">1</label><br>
+								<input type="radio" id="2" name="data[Team Size]" value="2">
+								<label for="2">2</label><br>
+								<input type="radio" id="3" name="data[Team Size]" value="3">
+								<label for="3">3</label><br>
+								<input type="radio" id="4" name="data[Team Size]" value="4">
+								<label for="4">4</label><br>
+							</label>
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>What is the name of your business? </span>
+							<input type="text" name="data[Business Name]" placeholder="">
+						</div>
+		
+						<br>
+		
+						<div class="form-element radio-buttons">
+							<span>Is your idea a product or a service? </span>
+							<br>
+							<label for="">
+								<input type="radio" id = "Product" name="data[Product or Service]" value="Product">
+								<label for="Product">Product</label><br>
+								<input type="radio" id = "Service" name="data[Product or Service]" value="Service">
+								<label for="Service">Service</label><br>
+							</label>
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>How would you describe your business idea?</span>
+							<input name="data[Description]" id="" placeholder="">
+						</div>
+		
+						<br>
+		
+						<div class="form-element">
+							<span>What is your USP?</span>
+							<input name="data[USP]" id="" placeholder="">
+						</div>
+		
+						<br>
+						
+							<button type="submit">Submit</button>
+
+					</form>
+
+			</div>
+
+		</section>
+
+	    <script>
+
+			document.addEventListener('DOMContentLoaded', function() {	  
+			  try {
+				let app = firebase.app();
+				let features = [
+				  'auth', 
+				  'database', 
+				  'firestore',
+				  'functions',
+				  'messaging', 
+				  'storage', 
+				  'analytics', 
+				  'remoteConfig',
+				  'performance',
+				].filter(feature => typeof app[feature] === 'function');
+			  } catch (e) {
+				console.error(e);
+			  }
+			});
+		</script>
+
+		<script defer src="js/app.js"></script>
+		<script defer src="js/register.js"></script>
+    </body>
+
+</html>

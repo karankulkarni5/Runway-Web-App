@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Runway by ViralFission</title>
+		<meta name="description" content="Welcome to Runway 2022">
+		<meta name="" content="">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="shortcut icon" href="images/favicon.ico">
+		<link rel = "icon" href = "images/logo.png" type = "image/x-icon">
+		<link href="bootstrap/css/bootstrap.css" rel="stylesheet"> 
+		<link href="fonts/font-awesome/css/font-awesome.css" rel="stylesheet"> 
+		<link href="css/styles.css" rel="stylesheet"> 
+		<link href="css/animate.css" rel="stylesheet"> 
+		<link href="css/animations.css" rel="stylesheet"> 
+		<link href="css/custom.css" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto:100" rel="stylesheet">
+		<script defer src="/__/firebase/9.7.0/firebase-app-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-auth-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-firestore-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-functions-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-messaging-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-storage-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-analytics-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-remote-config-compat.js"></script>
+		<script defer src="/__/firebase/9.7.0/firebase-performance-compat.js"></script>
+		<script defer src="/__/firebase/init.js?useEmulator=true"></script>
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+	</head>
+
+    <body>
+        <div class='light x1'></div>
+        <div class='light x2'></div>
+        <div class='light x3'></div>
+        <div class='light x4'></div>
+        <div class='light x5'></div>
+        <div class='light x6'></div>
+        <div class='light x7'></div>
+        <div class='light x8'></div>
+        <div class='light x9'></div>
+
+		<section id = "whenSignedOut">
+			<h1>Welcome to the Runway 2022 Registration Portal!</h1>
+			<button id = "signInBtn">Sign in with Google</button>
+		</section>
+	
+		<section id = "whenSignedIn" class = "whenSignedIn" hidden = "true">
+            <div class="container" id="ff-compose"></div>
+            <script async defer src="https://formfacade.com/include/107508664320010904458/form/1FAIpQLScBauiVxjWgwxe-6X42p33fgWzc48UAwISm6qCnaZcL4qnT1A/bootstrap.js?div=ff-compose"></script>
+            <button id = "signOutBtn">Sign Out</button>
+        </section>
+
+	    <script>
+
+			document.addEventListener('DOMContentLoaded', function() {	  
+			  try {
+				let app = firebase.app();
+				let features = [
+				  'auth', 
+				  'database', 
+				  'firestore',
+				  'functions',
+				  'messaging', 
+				  'storage', 
+				  'analytics', 
+				  'remoteConfig',
+				  'performance',
+				].filter(feature => typeof app[feature] === 'function');
+			  } catch (e) {
+				console.error(e);
+			  }
+			});
+		</script>
+
+		<script defer src="js/app.js"></script>
+    </body>
+
+</html>
+
